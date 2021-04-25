@@ -1,0 +1,595 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #f7f7f8;
+        font-family: Inter, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: var(--font-base);
+        font-display: optional;
+        overflow: hidden;
+    }
+    
+    body,
+    h4,
+    h5,
+    h6,
+    html,
+    p {
+        line-height: 1.5;
+    }
+    
+    .tw-z-above {
+        z-index: 10 !important;
+    }
+    
+    .tw-left-0 {
+        left: 0 !important;
+    }
+    
+    .tw-bottom-0 {
+        bottom: 0 !important;
+    }
+    
+    .tw-right-0 {
+        right: 0 !important;
+    }
+    
+    .tw-top-0 {
+        top: 0 !important;
+    }
+    
+    .tw-absolute {
+        position: absolute !important;
+    }
+    
+    .tw-justify-content-center {
+        justify-content: center !important;
+    }
+    
+    .tw-align-items-center {
+        align-items: center !important;
+    }
+    
+    .tw-z-default {
+        z-index: 1 !important;
+    }
+    
+    .tw-absolute {
+        position: absolute !important;
+    }
+    
+    .tw-relative {
+        position: relative !important;
+    }
+    
+    .tw-flex-grow-1 {
+        flex-grow: 1 !important;
+    }
+    
+    .tw-flex-grow-0 {
+        flex-grow: 0 !important;
+    }
+    
+    .tw-flex-shrink-0 {
+        flex-shrink: 0 !important;
+    }
+    
+    .tw-flex-column {
+        flex-direction: column !important;
+    }
+    
+    .tw-flex-nowrap {
+        flex-wrap: nowrap !important;
+    }
+    
+    .tw-flex {
+        display: flex !important;
+    }
+    
+    .tw-full-height {
+        height: 100% !important;
+    }
+    
+    .tw-full-width {
+        width: 100% !important;
+    }
+    
+    .tw-block {
+        display: block !important;
+    }
+    
+    .tw-overflow-hidden {
+        overflow: hidden !important;
+    }
+    
+    a,
+    abbr,
+    acronym,
+    address,
+    applet,
+    article,
+    aside,
+    audio,
+    b,
+    big,
+    blockquote,
+    body,
+    canvas,
+    caption,
+    center,
+    cite,
+    code,
+    dd,
+    del,
+    details,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    embed,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hgroup,
+    html,
+    i,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    mark,
+    menu,
+    nav,
+    object,
+    ol,
+    output,
+    p,
+    pre,
+    q,
+    ruby,
+    s,
+    samp,
+    section,
+    small,
+    span,
+    strike,
+    strong,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    tt,
+    u,
+    ul,
+    var,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    
+    .top-nav {
+        z-index: 1000;
+    }
+    
+    .tw-flex-shrink-0 {
+        flex-shrink: 0 !important;
+    }
+    
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+    
+    .tw-align-items-stretch {
+        align-items: stretch !important;
+    }
+    
+    .tw-elevation-1 {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 2px rgba(0, 0, 0, .9) !important;
+        box-shadow: var(--shadow-elevation-1) !important;
+    }
+    
+    .tw-c-background-base {
+        background-color: #18181b !important;
+        background-color: var(--color-background-base) !important;
+    }
+    
+    .scrollable-area {
+        position: relative;
+        height: 100%;
+    }
+    
+    .scrollable-area--suppress-scroll-x>.simplebar-track.horizontal {
+        visibility: hidden !important;
+    }
+    
+    .scrollable-area .simplebar-track {
+        will-change: opacity;
+    }
+    
+    .simplebar-track.vertical {
+        top: 0;
+    }
+    
+    .scrollable-area .simplebar-track {
+        will-change: opacity;
+    }
+    
+    .simplebar-track.vertical {
+        top: 0;
+    }
+    
+    .simplebar-track.horizontal {
+        left: 0;
+        width: auto;
+        height: 11px;
+    }
+    
+    .simplebar-track {
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 11px;
+    }
+    
+    .scrollable-area .simplebar-track.vertical .simplebar-scrollbar {
+        width: .6rem;
+    }
+    
+    .tw-root--theme-dark .scrollable-area .simplebar-track .simplebar-scrollbar {
+        background: #1f1f23;
+    }
+    
+    .scrollable-area .simplebar-track .simplebar-scrollbar {
+        background: #000;
+        box-shadow: 0 0 1px 1px hsl(0deg 0% 100% / 25%);
+    }
+    
+    .simplebar-scrollbar {
+        position: absolute;
+        right: 2px;
+        border-radius: 7px;
+        min-height: 10px;
+        width: 7px;
+        opacity: 0;
+        -webkit-transition: opacity .2s linear;
+        transition: opacity .2s linear;
+        background: #000;
+        background-clip: padding-box;
+    }
+    
+    .scrollable-area--suppress-scroll-x>.simplebar-scroll-content,
+    .scrollable-area--suppress-scroll-x>.simplebar-scroll-content>.simplebar-content {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .scrollable-area--suppress-scroll-x>.simplebar-scroll-content>.simplebar-content {
+        overflow-x: hidden;
+    }
+    
+    .scrollable-area .simplebar-scroll-content {
+        max-height: inherit !important;
+    }
+    
+    .simplebar-scroll-content {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        min-width: 100%;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+    
+    .root-scrollable__content {
+        display: flex;
+    }
+    
+    .channel-root {
+        transition: all .3s .3s;
+        transition-property: background-color, background-image;
+    }
+    
+    .channel-root--watch .channel-root__player {
+        position: absolute;
+    }
+    
+    .channel-root__player,
+    .channel-root__watch-party-player {
+        max-height: calc(100vh - 16rem);
+    }
+    
+    .channel-root__player {
+        width: 100%;
+        position: absolute;
+    }
+    
+    .resize-detector {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        z-index: -1;
+        visibility: hidden;
+    }
+    
+    .resize-detector__grow,
+    .resize-detector__shrink {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0s;
+    }
+    
+    .resize-detector__shrink {
+        width: 200%;
+        height: 200%;
+    }
+    
+    .resize-detector__grow,
+    .resize-detector__shrink {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0s;
+    }
+    
+    .channel-page__video-player {
+        max-height: calc(100vh - 16rem);
+        overflow: hidden;
+    }
+    
+    .channel-root+.persistent-player {
+        width: 100%;
+    }
+    
+    .channel-root--unanimated+.persistent-player {
+        transition: 0s !important;
+    }
+    
+    .dNNaBC {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .hhnnBG {
+        padding-bottom: 56.25%;
+    }
+    
+    .dNNaBC> :not(.ScAspectSpacer-sc-1sw3lwy-0) {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        min-height: 100%;
+        top: 0px;
+    }
+    
+    .dNNaBC {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .hhnnBG {
+        padding-bottom: 56.25%;
+    }
+    
+    .dNNaBC> :not(.ScAspectSpacer-sc-1sw3lwy-0) {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        min-height: 100%;
+        top: 0px;
+    }
+    
+    .video-player,
+    .video-player__container {
+        background: #000;
+    }
+    
+    .video-player__container--resize-calc {
+        max-height: calc(100vh - 16rem);
+    }
+    
+    .video-player iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .celebration__overlay {
+        pointer-events: none;
+        background-color: transparent;
+    }
+    
+    .right-column--beside .channel-root__right-column {
+        width: 34rem;
+    }
+    
+    .tw-root--theme-dark .channel-root__right-column {
+        background: #0e0e10;
+    }
+    
+    .channel-root__right-column--expanded {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .channel-root__right-column {
+        background: #f7f7f8;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tw-c-background-base {
+        background-color: #18181b !important;
+        background-color: var(--color-background-base) !important;
+    }
+    
+    .tw-border-l {
+        border-left: 1px solid hsla(0, 0%, 100%, .1) !important;
+        border-left: var(--border-width-default) solid var(--color-border-base) !important;
+    }
+    
+    .chat-shell {
+        min-width: 0;
+    }
+    
+    .chat-shell__expanded {
+        min-width: 34rem;
+    }
+    
+    @media screen and (min-width: 920px) {
+        .channel-root--hold-chat+.persistent-player,
+        .channel-root--watch-chat+.persistent-player,
+        .channel-root__info--with-chat .channel-info-content,
+        .channel-root__player--with-chat {
+            width: calc(100% - 34rem);
+        }
+    }
+    
+    .channel-root__info {
+        margin-top: calc(100% - 56.25vw) !important;
+    }
+    
+    @media screen and (orientation: landscape) and (min-width: 732px) {
+        .channel-root__info {
+            margin-top: calc(100% - 61.25vw) !important;
+        }
+    }
+    
+    @media screen and (orientation: landscape) and (min-width: 823px) {
+        .channel-root__info {
+            margin-top: calc(100% - 65.25vw) !important;
+        }
+    }
+    
+    @media screen and (orientation: landscape) and (min-width: 1024px) {
+        .channel-root__info {
+            margin-top: calc(100% - 61.25vw) !important;
+        }
+    }
+    /**
+@media screen and (min-width: 1366px) {
+    .channel-root__info {
+        margin-top: 608px !important;
+    }
+}
+
+@media screen and (min-width: 1536px) and (min-height: 754px) {
+    .channel-root__info {
+        margin-top: 616px !important;
+    }
+}
+
+@media screen and (min-width: 1536px) and (min-height: 792px) {
+    .channel-root__info {
+        margin-top: 652px !important;
+    }
+}
+
+@media screen and (min-width: 1536px) and (min-height: 864px) {
+    .channel-root__info {
+        margin-top: 706px !important;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .channel-root__info {
+        margin-top: 742px !important;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .channel-root__info {
+        margin-top: 778px !important;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .channel-root__info {
+        margin-top: 912px !important;
+    }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1080px) {
+    .channel-root__info {
+        margin-top: 942px !important;
+    }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
+    .channel-root__info {
+        margin-top: 1267px !important;
+    }
+}
+
+@media screen and (min-width: 3440px) {
+    .channel-root__info {
+        margin-top: 1306px !important;
+    }
+}
+
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+    .channel-root__info {
+        margin-top: 2004px !important;
+    }
+}
+
+@media screen and (min-width: 5120px) {
+    .channel-root__info {
+        margin-top: 2732px !important;
+    }
+}
+
+@media screen and (min-width: 5120px) and (min-height: 2160px) {
+    .channel-root__info {
+        margin-top: 2075px !important;
+    }
+}
+
+@media screen and (min-width: 5120px) and (min-height: 2880px) {
+    .channel-root__info {
+        margin-top: 2723px !important;
+    }
+}**/
